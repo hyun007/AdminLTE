@@ -237,6 +237,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                 <li<?php if($tab === "sysadmin"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#sysadmin">System</a></li>
                 <li<?php if($tab === "blocklists"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#blocklists">Blocklists</a></li>
                 <li<?php if($tab === "dns"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#dns">DNS</a></li>
+                <li<?php if($tab === "local-dns"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#local-dns">DNS</a></li>
                 <li<?php if($tab === "piholedhcp"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#piholedhcp">DHCP</a></li>
                 <li<?php if($tab === "api"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#api">API / Web interface</a></li>
                 <li<?php if($tab === "privacy"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#privacy">Privacy</a></li>
@@ -901,6 +902,9 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                             </div>
                         </div>
                     </form>
+                </div>
+                <!-- ######################################################### Local DNS ######################################################### -->
+                <div id="local-dns" class="tab-pane fade<?php if($tab === "local-dns"){ ?> in active<?php } ?>">
                 </div>
                 <!-- ######################################################### API and Web ######################################################### -->
                 <?php
