@@ -224,7 +224,7 @@ if (isset($setupVars["API_PRIVACY_MODE"])) {
 ?>
 
 <?php
-if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists", "dns", "piholedhcp", "api", "privacy", "teleporter"))) {
+if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "local-dns", "blocklists", "dns", "piholedhcp", "api", "privacy", "teleporter"))) {
     $tab = $_GET['tab'];
 } else {
     $tab = "sysadmin";
