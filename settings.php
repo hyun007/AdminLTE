@@ -905,6 +905,31 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                 </div>
                 <!-- ######################################################### Local DNS ######################################################### -->
                 <div id="local-dns" class="tab-pane fade<?php if($tab === "local-dns"){ ?> in active<?php } ?>">
+                    <form role="form" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">LOCAL DNS settings</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label>IP and Hostname</label>
+                                                    <textarea name="hostnames" class="form-control" placeholder="Enter one ip and hostname per line"
+                                                              rows="20"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="field" value="LOCALDNS">
+                                <input type="hidden" name="token" value="<?php echo $token ?>">
+                                <button type="submit" class="btn btn-primary pull-right">Save</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- ######################################################### API and Web ######################################################### -->
                 <?php
