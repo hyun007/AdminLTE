@@ -175,6 +175,24 @@ function readAdlists()
 	// Read available adlists
 	$adlist = readAdlists();
 
+$lanList = [];
+function readLanList() {
+	$list = [];
+	$handle = @fopen("/etc/pihole/lan.list", "r");
+	if ($handle) {
+		while (($line = fgets($handle)) !== false)
+		{
+			array_push(trim($line));
+		}
+		fclose($handle);
+	}
+	return $list;
+}
+
+	// Read available adlists
+	$lanList = readLanList();
+
+
 	$error = "";
 	$success = "";
 
