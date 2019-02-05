@@ -917,7 +917,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label>IP and Hostname</label>
-                                                    <textarea name="hostnames" class="form-control" placeholder="Enter one ip and hostname per line"
+                                                    <textarea name="lan-hostnames" class="form-control" placeholder="Enter one ip and hostname per line"
                                                               rows="20"><?php foreach ($lanList as $line) { echo "$line\n"; } ?></textarea>
                                                 </div>
                                             </div>

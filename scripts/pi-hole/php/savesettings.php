@@ -188,6 +188,13 @@ function readLanList() {
 	}
 	return $list;
 }
+function saveLanList($list) {
+	$handle = @fopen("/etc/pihole/lan.list", "w");
+	if ($handle) {
+		fwrite($handle, $list);
+		fclose($handle);
+	}
+}
 
 	// Read available adlists
 	$lanList = readLanList();
@@ -679,6 +686,13 @@ function readLanList() {
 					$success = "The DHCP server has been deactivated";
 				}
 
+				break;
+
+			case "LOCALDNS":
+				if(isset($_POST["lan-hostnames"])) {
+					saveLanList($_POST["lan-hostnames"]);
+					exec("sudo pihole restartdns");
+				}
 				break;
 
 			case "adlists":
