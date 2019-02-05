@@ -189,6 +189,7 @@ function readLanList() {
 	return $list;
 }
 function saveLanList($list) {
+	global $lanList;
 	$handle = @fopen("/etc/pihole/lan.list", "w");
 	if ($handle) {
 		fwrite($handle, $list);
