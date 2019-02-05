@@ -182,7 +182,7 @@ function readLanList() {
 	if ($handle) {
 		while (($line = fgets($handle)) !== false)
 		{
-			array_push(trim($line));
+			array_push($list, trim($line));
 		}
 		fclose($handle);
 	}
