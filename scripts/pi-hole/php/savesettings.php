@@ -194,6 +194,7 @@ function saveLanList($list) {
 		fwrite($handle, $list);
 		fclose($handle);
 	}
+	$lanList = readLanList();
 }
 
 	// Read available adlists
